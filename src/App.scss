@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+}
+@mixin Pop {
+  font-family: 'Poppins', sans-serif;
+}
+@mixin Arch {
+  font-family: 'Archivo Black', sans-serif;
+}
+@mixin M450 {
+  @media screen and (max-width: 450px) {
+    @content;
+  }
+}
+
+.App {
+  background-color: #e9e9f3;
+  .hero {
+    margin-bottom: 50px;
+    background: linear-gradient(rgba(0, 0, 0, 0.244), rgba(0, 0, 0, 0.244)),
+      url('./images/arms.jpg');
+    min-height: 100vh;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    background-position: center;
+    .head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #fff;
+      padding: 0 20px;
+      img {
+        width: 100px;
+        &.one {
+          width: 70px;
+        }
+      }
+    }
+    .texts {
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      color: #fff;
+      .cover {
+        width: 100%;
+        text-align: center;
+        h1 {
+          font-size: 9vw;
+          @include Arch;
+        }
+        p {
+          @include Pop;
+          font-size: 2vw;
+        }
+        button {
+          margin-top: 40px;
+          border: 1px solid #fff;
+          color: #fff;
+          font-size: 20px;
+          text-transform: uppercase;
+          @include Pop;
+          padding: 10px 40px;
+          background: none;
+          cursor: pointer;
+          transition: background 1s;
+          &:hover {
+            background-color: #121828;
+          }
+        }
+      }
+    }
+  }
+  .about {
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap-reverse;
+    @include M450 {
+      padding: 50px 20px;
+    }
+
+    .left {
+      width: 60%;
+      @media screen and (max-width: 900px) {
+        width: 100%;
+      }
+      img {
+        width: 100%;
+      }
+    }
+    .right {
+      width: 35%;
+      @include Pop;
+      @media screen and (max-width: 900px) {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      h1 {
+        font-weight: 700;
+        font-size: 30px;
+        color: #121828;
+        padding-bottom: 10px;
+      }
+      p {
+        font-size: 14px;
+        color: #121828ab;
+        line-height: 30px;
+      }
+    }
+  }
+  .locat {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    flex-wrap: wrap;
+    @media screen and (max-width: 900px) {
+      padding-top: 0;
+    }
+    .left {
+      width: 45%;
+      @include Arch;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @media screen and (max-width: 900px) {
+        width: 100%;
+        margin-bottom: 40px;
+      }
+      .cover {
+        display: flex;
+        justify-content: center;
+        .one {
+          h1 {
+            font-size: 30px;
+            @include M450 {
+              font-size: 20px;
+            }
+          }
+          .linee {
+            display: flex;
+            justify-content: center;
+            padding: 5px 0;
+            .line {
+              width: 5px;
+              height: 100px;
+              background-color: #121828;
+            }
+          }
+        }
+        .two {
+          padding-left: 20px;
+          h1 {
+            font-size: 38px;
+            @include M450 {
+              font-size: 28px;
+            }
+          }
+        }
+      }
+      .time {
+        text-align: center;
+        padding-top: 20px;
+        h1 {
+          font-size: 30px;
+          @include M450 {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+    .right {
+      width: 50%;
+      @media screen and (max-width: 900px) {
+        width: 100%;
+      }
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .rsvp {
+    padding: 50px;
+    @include M450 {
+      padding: 50px 20px;
+    }
+    .cover {
+      border-top: 1px solid #000;
+      padding-top: 50px;
+      .rs {
+        @include Arch;
+        h1 {
+          font-size: 10vw;
+          @include M450 {
+            font-size: 60px;
+          }
+        }
+      }
+      .content {
+        text-align: center;
+        p {
+          @include Pop;
+          font-size: 30px;
+          padding-bottom: 10px;
+          @include M450 {
+            font-size: 15px;
+          }
+        }
+        img {
+          @include M450 {
+            width: 100%;
+          }
+        }
+      }
+      .vp {
+        @include Arch;
+        text-align: right;
+        h1 {
+          font-size: 10vw;
+          @include M450 {
+            font-size: 60px;
+          }
+        }
+      }
+    }
+  }
+}
