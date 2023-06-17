@@ -20,7 +20,7 @@
   .hero {
     margin-bottom: 50px;
     background: linear-gradient(rgba(0, 0, 0, 0.244), rgba(0, 0, 0, 0.244)),
-      url('./images/arms.jpg');
+      url('./images/bgg.png');
     min-height: 100vh;
     background-size: cover;
     display: flex;
@@ -83,7 +83,7 @@
     }
 
     .left {
-      width: 60%;
+      width: 50%;
       @media screen and (max-width: 900px) {
         width: 100%;
       }
@@ -92,7 +92,7 @@
       }
     }
     .right {
-      width: 35%;
+      width: 45%;
       @include Pop;
       @media screen and (max-width: 900px) {
         width: 100%;
@@ -223,6 +223,175 @@
           @include M450 {
             font-size: 60px;
           }
+        }
+      }
+    }
+  }
+  .vocations {
+    padding: 50px;
+    background-color: #fff;
+    @include Pop;
+    .head {
+      text-align: center;
+      padding-bottom: 40px;
+      h1 {
+        font-size: 30px;
+        color: #121828;
+      }
+    }
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      .card {
+        flex: 0 0 200px;
+        min-width: 17%;
+        border: 1px solid #e9e9f3;
+        padding: 10px;
+        margin-bottom: 30px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        h2 {
+          font-size: 18px;
+        }
+        p {
+          color: #53537a;
+          font-size: 11px;
+          padding: 10px 0;
+        }
+        h4 {
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
+.register {
+  background-color: #e9e9f3;
+  min-height: 100vh;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  background-position: center;
+  @include Pop;
+  .head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 0 20px;
+    img {
+      width: 100px;
+      &.one {
+        width: 70px;
+      }
+    }
+  }
+  .form-head {
+    margin-top: 30px;
+    text-align: center;
+    @include Pop;
+    h1 {
+      font-size: 30px;
+      color: #121828;
+    }
+  }
+  .form {
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+    margin-top: 40px;
+    .cover {
+      width: 100%;
+      max-width: 800px;
+      background-color: #fff;
+      padding: 30px;
+      .tag {
+        padding-bottom: 20px;
+        h2 {
+          font-size: 25px;
+          font-weight: 500;
+        }
+      }
+      .tag2 {
+        margin-top: 30px;
+        padding-bottom: 20px;
+        border-top: 1px solid #53537a;
+        padding-top: 20px;
+        h2 {
+          font-size: 25px;
+          font-weight: 500;
+        }
+      }
+      .form-body {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        .card {
+          width: 45%;
+          margin-bottom: 20px;
+          p {
+            color: #0b0b10;
+            padding-bottom: 5px;
+          }
+          input,
+          select {
+            width: 100%;
+            padding: 15px;
+          }
+          input {
+            width: calc(100% - 30px);
+          }
+        }
+        .long {
+          width: 100%;
+          .remove {
+            background-color: rgb(184, 13, 13);
+            width: fit-content;
+            padding: 10px;
+            cursor: pointer;
+            p {
+              color: #fff;
+            }
+          }
+        }
+      }
+      .lons {
+        display: flex;
+        justify-content: right;
+        .add {
+          margin-top: 10px;
+          border: 1px solid #055105;
+          width: fit-content;
+          padding: 10px;
+          cursor: pointer;
+          p {
+            color: #055105;
+          }
+        }
+      }
+      .accept {
+        display: flex;
+        align-items: center;
+        padding-top: 30px;
+        input {
+          margin-right: 10px;
+        }
+        p {
+          padding-right: 5px;
+        }
+      }
+      .submit {
+        margin-top: 20px;
+        button {
+          padding: 10px 20px;
+          border-radius: 10px;
+          color: #e9e9f3;
+          border: none;
+          background-color: #055105;
         }
       }
     }
