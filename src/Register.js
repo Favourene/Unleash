@@ -3,6 +3,48 @@ import './App.scss'
 import Logo from './images/logo.jpg'
 import Teen from './images/teen.jpg'
 
+const List = [
+  {
+    name: 'Culinary',
+    tutor: 'Demola	',
+  },
+  {
+    name: 'Nail Techinician',
+    tutor: 'Bidemi	',
+  },
+  {
+    name: 'Skin Care',
+    tutor: 'Jane	',
+  },
+  {
+    name: 'Learning Instruments',
+    tutor: 'Tomiwa/princewil',
+  },
+  {
+    name: 'Fashion Designing',
+    tutor: 'Kemah	',
+  },
+  {
+    name: 'Hair Styling',
+    tutor: '?',
+  },
+  {
+    name: 'Digital marketing',
+    tutor: 'Wale	',
+  },
+  {
+    name: 'Content Writing',
+    tutor: 'Gloria	',
+  },
+  {
+    name: 'Public Speaking',
+    tutor: 'P mols	',
+  },
+  {
+    name: 'Creatives	',
+    tutor: 'P kelechi',
+  },
+]
 function Register() {
   const [childInfo, setChildInfo] = useState([
     {
@@ -162,8 +204,9 @@ function Register() {
                   defaultValue={form.class}
                 >
                   <option value=''>-select-</option>
-                  <option value=''>-Yes-</option>
-                  <option value=''>-No-</option>
+                  {List.map((item) => (
+                    <option value={item.name}>{item.name}</option>
+                  ))}
                 </select>
               </div>
               <div className='long'>

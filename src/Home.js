@@ -4,6 +4,7 @@ import Logo from './images/logo.jpg'
 import Teen from './images/teen.jpg'
 import Teen2 from './images/teen2.jpg'
 import Frame from './images/frame.png'
+import Logo3 from './images/bgg-removebg-preview.png'
 import { useNavigate } from 'react-router-dom'
 
 function Home() {
@@ -59,6 +60,7 @@ function Home() {
         </div>
         <div className='texts'>
           <div className='cover'>
+            <img src={Logo3} alt='' />
             <h1>Unleash Your Faith</h1>
             <p>NAVIGATE CONFRENCE 2023</p>
 
