@@ -5,6 +5,8 @@ import Teen from './images/teen.jpg'
 import Teen2 from './images/teen2.jpg'
 import Frame from './images/frame.png'
 import Logo3 from './images/bgg.png'
+import Logo4 from './images/bgg-removebg-preview.png'
+import { FaTiktok, FaInstagram, FaYoutube, FaPaperPlane } from 'react-icons/fa'
 import { useNavigate } from 'react-router-dom'
 
 function Home() {
@@ -106,6 +108,9 @@ function Home() {
               ripe grain. Everything burned, both stacked and standing grain,
               vineyards and olive orchards—everything.
             </p>
+            <p>
+              <b>Date:</b> July 23rd - July 28th, 2023
+            </p>
           </div>
         </div>
         {/* <div className='locat'>
@@ -147,7 +152,7 @@ function Home() {
             ))}
           </div>
         </div>
-        <div className='rsvp'>
+        {/* <div className='rsvp'>
           <div className='cover'>
             <div className='rs'>
               <h1>RS</h1>
@@ -160,20 +165,60 @@ function Home() {
               <h1>VP</h1>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
       <div className='footer'>
         <div className='footer-covers'>
-          <div className='top'>
-            <h1>Stay in touch</h1>
+          <div className='left'>
+            <div className='top'>
+              <h1>RSVP</h1>
+            </div>
+            <ul>
+              <li>
+                <b>Date:</b> <p>July 23rd - July 28th, 2023</p>
+              </li>
+              <li>
+                <b>Type:</b> <p>Residential</p>
+              </li>
+              <li>
+                <button>Register</button>
+              </li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
           </div>
-          <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
+          <div className='left'>
+            <div className='top'>
+              <h1>Stay in touch</h1>
+            </div>
+            <ul className='icons'>
+              <a href='https://www.tiktok.com/@elevationteenz'>
+                <li>
+                  <FaTiktok />
+                  <p>Titok</p>
+                </li>
+              </a>
+              <a href='https://www.instagram.com/elevationteenz'>
+                <li>
+                  <FaInstagram />
+                  <p>Instagram</p>
+                </li>
+              </a>
+              <a href='https://www.youtube.com/@elevationteenz'>
+                <li>
+                  <FaYoutube />
+                  <p>Youtube</p>
+                </li>
+              </a>
+              <a href='mailto:teenznation@elevationng.org'>
+                <li>
+                  <FaPaperPlane />
+                  <p>Email</p>
+                </li>
+              </a>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
