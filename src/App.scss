@@ -9,6 +9,11 @@
 @mixin Arch {
   font-family: 'Archivo Black', sans-serif;
 }
+@mixin M600 {
+  @media screen and (max-width: 600px) {
+    @content;
+  }
+}
 @mixin M450 {
   @media screen and (max-width: 450px) {
     @content;
@@ -16,22 +21,26 @@
 }
 
 .App {
-  background-color: #e9e9f3;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   .hero {
     margin-bottom: 50px;
     background: linear-gradient(rgba(0, 0, 0, 0.244), rgba(0, 0, 0, 0.244)),
-      url('https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=449&q=80');
-    min-height: 100vh;
+      url('./images/bggr.jpeg');
     background-size: cover;
-    display: flex;
-    flex-direction: column;
-    background-position: center;
+    min-height: 100vh;
+
     .head {
       display: flex;
       justify-content: space-between;
       align-items: center;
       background-color: #fff;
-      padding: 0 20px;
+      padding: 5px 20px;
+      position: fixed;
+      width: calc(100% - 40px);
       img {
         width: 100px;
         &.one {
@@ -44,14 +53,20 @@
       display: flex;
       align-items: center;
       color: #fff;
+      padding: 100px 50px;
+
       .cover {
         width: 100%;
         text-align: center;
         img {
           width: 200px;
+          aspect-ratio: 1/1;
+          border-radius: 50%;
+          object-fit: cover;
+          object-position: center;
         }
         h1 {
-          font-size: 9vw;
+          font-size: 5vw;
           @include Arch;
         }
         p {
@@ -76,15 +91,18 @@
       }
     }
   }
+  .covers {
+    max-width: 1300px;
+    padding: 0 20px;
+  }
   .about {
-    padding: 50px;
+    padding: 50px 0;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap-reverse;
     @include M450 {
       padding: 50px 20px;
     }
-
     .left {
       width: 50%;
       @media screen and (max-width: 900px) {
@@ -92,6 +110,7 @@
       }
       img {
         width: 100%;
+        height: 100%;
       }
     }
     .right {
@@ -104,13 +123,16 @@
       h1 {
         font-weight: 700;
         font-size: 30px;
-        color: #121828;
+        color: #ef5411;
         padding-bottom: 10px;
       }
       p {
         font-size: 14px;
         color: #121828ab;
         line-height: 30px;
+        b {
+          color: #f27641;
+        }
       }
     }
   }
@@ -232,40 +254,50 @@
   }
   .vocations {
     padding: 50px;
-    background-color: #fff;
+    background-color: #fdeee788;
+    border-radius: 40px;
+    @include M450 {
+      padding: 50px 20px;
+    }
     @include Pop;
+    margin-top: 30px;
     .head {
       text-align: center;
       padding-bottom: 40px;
       h1 {
         font-size: 30px;
-        color: #121828;
+        color: #003049;
       }
     }
     .cards {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
+      gap: 3%;
       .card {
-        flex: 0 0 200px;
-        min-width: 17%;
-        border: 1px solid #e9e9f3;
-        padding: 10px;
+        width: 31%;
+        border-radius: 8px;
+        background-color: #fff;
+        overflow: hidden;
         margin-bottom: 30px;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+        @include M600 {
+          width: 48%;
+        }
+        @include M450 {
+          width: 100%;
+        }
+        .img {
+          width: 100%;
+          img {
+            width: 100%;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            object-position: center;
+          }
+        }
         h2 {
-          font-size: 18px;
-        }
-        p {
-          color: #53537a;
-          font-size: 11px;
-          padding: 10px 0;
-        }
-        h4 {
-          font-weight: 500;
+          padding: 20px;
+          font-size: 20px;
+          font-weight: 600;
         }
       }
     }
