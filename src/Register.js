@@ -228,7 +228,7 @@ function Register() {
             <input type='checkbox' name='' id='' />
             <p>I agree that i have read the </p>
             <a
-              href='https://drive.google.com/file/d/1SX4HAL2o64MvpXpb6QJTfqDjQvA88yqc/view?usp=sharing'
+              href='https://drive.google.com/file/d/1kPzqk_QU3Oj_2pUPaVE2pAs_RCUylkaO/view?usp=sharing'
               target='_blank'
             >
               <p>camp rules </p>
