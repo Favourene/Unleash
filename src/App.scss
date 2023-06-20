@@ -81,7 +81,7 @@
         }
         h1 {
           font-size: 5vw;
-          @include Arch;
+          @include Pop;
           @include M500() {
             font-size: 25px;
           }
@@ -614,6 +614,7 @@
         display: flex;
         align-items: center;
         padding-top: 30px;
+        flex-wrap: wrap;
         input {
           margin-right: 10px;
         }

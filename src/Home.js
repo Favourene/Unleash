@@ -892,11 +892,8 @@ function Home() {
                 <b>Type:</b> <p>Residential</p>
               </li>
               <li>
-                <button>Register</button>
+                <button onClick={() => navigate('/register')}>Register</button>
               </li>
-              <li></li>
-              <li></li>
-              <li></li>
             </ul>
           </div>
           <div className='left'>
@@ -905,7 +902,7 @@ function Home() {
             </div>
             <ul className='icons'>
               <a
-                href='https://drive.google.com/file/d/1N8oYVvCJhj-L9r2cJ-BaRN56gWCRLLOD/view?usp=sharing'
+                href='https://drive.google.com/file/d/1RjPlkIM-_mVxRkSBaomCcDkOMwiglSMa/view?usp=sharing'
                 target='_blank'
               >
                 <li>
@@ -914,7 +911,7 @@ function Home() {
                 </li>
               </a>
               <a
-                href='https://drive.google.com/file/d/1kPzqk_QU3Oj_2pUPaVE2pAs_RCUylkaO/view?usp=sharing'
+                href='https://drive.google.com/file/d/1WUoE7oy1X4pNPLvwwuw-W1YZ8GLXiR3A/view?usp=sharing'
                 target='_blank'
               >
                 <li>
